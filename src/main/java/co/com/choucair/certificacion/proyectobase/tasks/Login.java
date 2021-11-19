@@ -1,6 +1,5 @@
 package co.com.choucair.certificacion.proyectobase.tasks;
 
-import co.com.choucair.certificacion.proyectobase.userinterface.ChoucairAcademyPage;
 import co.com.choucair.certificacion.proyectobase.userinterface.ChoucairLoginPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -9,13 +8,14 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
 public class Login implements Task {
+    private String strUser;
+    private String strPassword;
+
     public Login(String strUser, String strPassword) {
         this.strUser = strUser;
         this.strPassword = strPassword;
     }
 
-    private String strUser;
-    private String strPassword;
 
     public static Login onThePage(String strUser, String strPassword) {
 

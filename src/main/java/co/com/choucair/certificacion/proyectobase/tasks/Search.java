@@ -1,7 +1,7 @@
 package co.com.choucair.certificacion.proyectobase.tasks;
 
+import co.com.choucair.certificacion.proyectobase.userinterface.SearchCoursePage;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
@@ -14,7 +14,7 @@ public class Search implements Task {
     }
 
     public static Search the(String course) {
-        return Tasks.instrumented(Search.class);
+        return Tasks.instrumented(Search.class,course);
     }
 
     @Override
